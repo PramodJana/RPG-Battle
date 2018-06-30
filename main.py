@@ -1,6 +1,6 @@
-from classes.game import Person, bcolors
-from classes.magic import Spell
-from classes.inventory import Item
+from game import Person, bcolors
+from magic import Spell
+from inventory import Item
 import random
  
 print("\n\n")
