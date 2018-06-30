@@ -29,10 +29,12 @@ class Person:
         return random.randrange(self.atkl, self.atkh)
 
     def take_damage(self, dmg):
-        self.hp -= dmg
-        if self.hp < 0:
+        if self.hp < dmg:
             self.hp = 0
+        else:
+            self.hp -= dmg
         return self.hp
+
 
     def heal(self, dmg):
         self.hp += dmg
