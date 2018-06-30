@@ -152,16 +152,16 @@ while running:
  
                 print(bcolors.FAIL + "\n" + item.name + " deals", str(item.prop), " points of damage to " + enemies[enemy].name.replace("  ", "") + "." + bcolors.ENDC)
  
-    if enemies[enemy].get_hp() == 0:
+    if enemies[enemy].get_hp() < 1:
         print(enemies[enemy].name.replace("  ", "") + " has died.")
         del enemies[enemy]
  
     for player in players:
-        if player.get_hp() == 0:
+        if player.get_hp() < 1:
             defeated_players += 1
  
     for enemy in enemies:
-        if enemy.get_hp() == 0:
+        if enemy.get_hp() < 1:
             defeated_enemies += 1
  
     # Check if Player won
